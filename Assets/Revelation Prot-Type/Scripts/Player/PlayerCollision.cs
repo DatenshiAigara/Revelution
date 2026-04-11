@@ -15,11 +15,11 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.tag == "lava")
         {
             transform.position = spawner.position;
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
         } else if (collision.gameObject.tag == "edge")
         {
             transform.position = spawner.position;
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
         }
     }
 }

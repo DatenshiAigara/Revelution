@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    /*
     PlayerControls controls;
 
     void Awake()
@@ -15,5 +16,5 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         Debug.Log("Works!");
-    }
+    }*/
 }

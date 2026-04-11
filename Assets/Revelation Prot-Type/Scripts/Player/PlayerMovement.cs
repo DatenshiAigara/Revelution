@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    /*
     Rigidbody2D rb;
 
     PlayerControls controls;
@@ -111,5 +112,5 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalmove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
-    }
+    }*/
 }
