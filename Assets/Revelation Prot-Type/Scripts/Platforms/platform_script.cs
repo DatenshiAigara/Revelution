@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class platform_script : MonoBehaviour
 {
+    /*
     Rigidbody2D rb;
 
     void Awake()
@@ -13,6 +14,6 @@ public class platform_script : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        rb.isKinematic = false;
-    }
+        rb.Kinematic = false;
+    }*/
 }
