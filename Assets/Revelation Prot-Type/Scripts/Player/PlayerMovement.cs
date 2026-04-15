@@ -10,10 +10,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    /*
     Rigidbody2D rb;
 
-    PlayerControls controls;
+    InputAction controls;
 
     public CharacterController2D controller;
     public Animator animate;
@@ -32,11 +31,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        controls = new PlayerControls();
+        controls = new InputAction(binding: "<Keyboard>/Gameplay");
 
         current = time;
 
-        controls.Gameplay.Left.performed += ctx => Left();
+        /*controls.Gameplay.Left.performed += ctx => Left();
         controls.Gameplay.Left.canceled += ctx => Off();
         controls.Gameplay.Right.performed += ctx => Right();
         controls.Gameplay.Right.canceled += ctx => Off();
@@ -45,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         controls.Gameplay.Jump.performed += ctx => Jump();
         controls.Gameplay.Esc.performed += ctx => Pause();
         controls.Gameplay.Down.started += ctx => CrouchOn();
-        controls.Gameplay.Down.canceled += ctx => CrouchOff();
+        controls.Gameplay.Down.canceled += ctx => CrouchOff();*/
     }
 
     void Off()
@@ -95,12 +94,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnEnable()
     {
-        controls.Gameplay.Enable();
+        controls.Enable();
     }
 
     void OnDisable()
     {
-        controls.Gameplay.Disable();
+        controls.Disable();
     }
 
     void Pause()
@@ -112,5 +111,5 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalmove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
-    }*/
+    }
 }

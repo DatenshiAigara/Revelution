@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    /*
-    PlayerControls controls;
+    //Player controls;
 
     void Awake()
     {
-        controls = new PlayerControls();
-        controls.Gameplay.Up.performed += ctx => Attack();
+        //controls = new Player();
+        //controls.Gameplay.Up.performed += ctx => Attack();
     }
 
     void Attack()
     {
         Debug.Log("Works!");
-    }*/
+    }
 }
