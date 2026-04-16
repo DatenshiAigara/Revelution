@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    InputAction controls;
+    PlayerControls controls;
 
     public CharacterController2D controller;
     public Animator animate;
@@ -31,12 +31,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        //Left = InputSystem.actions.FindAction("Left");
+        controls = new PlayerControls();
 
         current = time;
 
-        /*Left.performed += ctx => Left();
-        controls.Gameplay.Left.canceled += ctx => Off();
+        controls.Player.Left.performed += ctx => Left();
+        /*controls.Player.Left.canceled += ctx => Off();
         controls.Gameplay.Right.performed += ctx => Right();
         controls.Gameplay.Right.canceled += ctx => Off();
         controls.Gameplay.Run.performed += ctx => RunOn();
@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Pause()
     {
-        SceneManager.LoadScene("Game-Over");
+        //SceneManager.LoadScene("Game-Over");
     }
 
     void FixedUpdate()

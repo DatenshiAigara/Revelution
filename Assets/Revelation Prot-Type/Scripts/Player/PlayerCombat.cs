@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour
     void Awake()
     {
         controls = new PlayerControls();
-        controls.Player.Attack.performed += ctx => Attack();
+        //controls.Player.Attack.performed += ctx => Attack();
     }
 
     void Attack()
