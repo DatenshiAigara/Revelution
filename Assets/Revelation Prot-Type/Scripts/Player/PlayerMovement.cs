@@ -31,11 +31,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        controls = new InputAction(binding: "<Keyboard>/Gameplay");
+        //Left = InputSystem.actions.FindAction("Left");
 
         current = time;
 
-        /*controls.Gameplay.Left.performed += ctx => Left();
+        /*Left.performed += ctx => Left();
         controls.Gameplay.Left.canceled += ctx => Off();
         controls.Gameplay.Right.performed += ctx => Right();
         controls.Gameplay.Right.canceled += ctx => Off();

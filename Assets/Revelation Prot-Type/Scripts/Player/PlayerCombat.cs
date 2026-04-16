@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour
 {
-    //Player controls;
+    PlayerControls controls;
 
     void Awake()
     {
-        //controls = new Player();
-        //controls.Gameplay.Up.performed += ctx => Attack();
+        controls = new PlayerControls();
+        controls.Player.Attack.performed += ctx => Attack();
     }
 
     void Attack()
