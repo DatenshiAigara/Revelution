@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerControls controls;
 
     public CharacterController2D controller;
-    public Animator animate;
+    //public Animator animate;
 
     public float speed = 0f;
     public float time = 0f;
@@ -36,40 +36,40 @@ public class PlayerMovement : MonoBehaviour
         current = time;
 
         controls.Player.Left.performed += ctx => Left();
-        /*controls.Player.Left.canceled += ctx => Off();
-        controls.Gameplay.Right.performed += ctx => Right();
-        controls.Gameplay.Right.canceled += ctx => Off();
-        controls.Gameplay.Run.performed += ctx => RunOn();
-        controls.Gameplay.Run.canceled += ctx => RunOff();
-        controls.Gameplay.Jump.performed += ctx => Jump();
-        controls.Gameplay.Esc.performed += ctx => Pause();
-        controls.Gameplay.Down.started += ctx => CrouchOn();
-        controls.Gameplay.Down.canceled += ctx => CrouchOff();*/
+        controls.Player.Left.canceled += ctx => Off();
+        controls.Player.Right.performed += ctx => Right();
+        controls.Player.Right.canceled += ctx => Off();
+        //controls.Gameplay.Run.performed += ctx => RunOn();
+        //controls.Gameplay.Run.canceled += ctx => RunOff();
+        controls.Player.Jump.performed += ctx => Jump();
+        //controls.Gameplay.Esc.performed += ctx => Pause();
+        controls.Player.Down.started += ctx => CrouchOn();
+        controls.Player.Down.canceled += ctx => CrouchOff();
     }
 
     void Off()
     {
         horizontalmove = 0;
-        animate.SetBool("Move", false);
+        //animate.SetBool("Move", false);
     }
 
     void Left()
     {
         horizontalmove = -1 * speed;
-        animate.SetBool("Move", true);
+        //animate.SetBool("Move", true);
     }
 
     void Right()
     {
         horizontalmove = 1 * speed;
-        animate.SetBool("Move", true);
+        //animate.SetBool("Move", true);
     }
 
     void RunOn()
     {
         move = horizontalmove;
         horizontalmove = horizontalmove * 2f;
-        animate.SetBool("Move", true);
+        //animate.SetBool("Move", true);
     }
 
     void RunOff()
