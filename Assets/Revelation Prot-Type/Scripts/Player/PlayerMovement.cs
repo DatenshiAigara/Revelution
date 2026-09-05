@@ -56,12 +56,14 @@ public class PlayerMovement : MonoBehaviour
     void Left()
     {
         horizontalmove = -1 * speed;
+        debug.log("Left");
         //animate.SetBool("Move", true);
     }
 
     void Right()
     {
         horizontalmove = 1 * speed;
+        console.writeline("Right");
         //animate.SetBool("Move", true);
     }
 
